@@ -1,19 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chair Show</title>
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
 
     <h1>Industrial Design Chairs</h1>
-    <model-viewer src="./Models/Picard.glb"
-              alt="Picard Chair"
-              ar
-              auto-rotate
-              camera-controls></model-viewer>
-    
+    <div class=chairs>
+        <model-viewer src="./Models/Picard.glb" alt="Picard Chair" ar auto-rotate camera-controls></model-viewer>
+        <model-viewer src="./Models/JRMY.glb" alt="Picard Chair" ar auto-rotate camera-controls></model-viewer>
+        <model-viewer src="./Models/Onsilla.glb" alt="Picard Chair" ar auto-rotate camera-controls></model-viewer>
+        <model-viewer src="./Models/JRMY.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="commerce" poster="poster.webp" shadow-intensity="1">
+            <button class="Hotspot" slot="hotspot-2" data-position="0.18463205066081456m 0.6000512098946791m 0.5253139652729881m" data-normal="-0.025534392543717567m 0.999654827611734m -0.006182267381614053m" data-visibility-attribute="visible">
+                <div class="HotspotAnnotation">Funky Table</div>
+            </button>
+        </model-viewer>
+    </div>
+
 </body>
+
 </html>
