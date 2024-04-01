@@ -4,25 +4,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chair Show</title>
+    <title>Industrial Humber Chairs</title>
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 
-<body>
+<div class="nav">
+    <ol>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html">About</a></li>
+        <li><a href="index.html">Chairs</a></li>
+        <li><a href="index.html">Contact</a></li>
+    </ol>
+</div>
 
-    <h1>Industrial Design Chairs</h1>
-    <div class=chairs>
-        <model-viewer src="./Models/Picard.glb" alt="Picard Chair" ar auto-rotate camera-controls></model-viewer>
-        <model-viewer src="./Models/JRMY.glb" alt="Picard Chair" ar auto-rotate camera-controls></model-viewer>
-        <model-viewer src="./Models/Onsilla.glb" alt="Picard Chair" ar auto-rotate camera-controls></model-viewer>
-        <model-viewer src="./Models/JRMY.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="commerce" poster="poster.webp" shadow-intensity="1">
-            <button class="Hotspot" slot="hotspot-2" data-position="0.18463205066081456m 0.6000512098946791m 0.5253139652729881m" data-normal="-0.025534392543717567m 0.999654827611734m -0.006182267381614053m" data-visibility-attribute="visible">
-                <div class="HotspotAnnotation">Funky Table</div>
-            </button>
-        </model-viewer>
+<!-- Hero Banner Container -->
+<section id="hero-banner">
+    <div class="banner-wrapper">
+        <h1>Nienkamper Industrial Chairs by Humber College</h1>
+        <p>Featuring Nienkamper's new line up of Industrial Chairs in collaboration with Humber College. Check out the
+            chairs below featuring a new 3D/AR experience to better visualize your future furniture.</p>
     </div>
+</section>
 
-</body>
+<!-- Section for the portfolio -->
+<section id="chairs">
+    <!-- Container for the portfolio items -->
+    <div class="chairs-container">
+        <div class="chairs-item">
+            <h2>JRMY</h2>
+            <p>Relax on the flip side</p>
+            <model-viewer id="modelViewer1" src="./Models/JRMY.glb" ar ar-modes="webxr scene-viewer quick-look"
+                camera-controls tone-mapping="commerce" poster="./img/JRMY.png" shadow-intensity="1" exposure="1">
+                <button class="Hotspot" slot="hotspot-2"
+                    data-position="0.17561500118565188m 0.6002457530916261m 0.5489641725106073m"
+                    data-normal="-0.0168985738958943m 0.9988889859252369m -0.04399127183359254m"
+                    data-visibility-attribute="visible">
+                    <div class="HotspotAnnotation">Foldable Table</div>
+                </button>
+                <button class="Hotspot" slot="hotspot-3"
+                    data-position="-0.1914544475371418m 0.6729499057526169m -0.045242613255275343m"
+                    data-normal="0.9109564364613463m 0.39773818324590227m 0.10937416723291868m"
+                    data-visibility-attribute="visible">
+                    <div class="HotspotAnnotation">Premium Nylon Fabric</div>
+                </button>
+            </model-viewer>
+            <button id="modelbutton" onclick="showFrontView1('modelViewer1')">Front View</button>
+            <button id="modelbutton" onclick="showBackView1('modelViewer1')">Back View</button>
+            <button id="modelbutton" onclick="showTopView1('modelViewer1')">Top View</button>
+        </div>
+        <div class="chairs-item">
+            <h2>Onsilla</h2>
+            <p>One way to stand out</p>
+            <model-viewer id="modelViewer2" src="./Models/Onsilla.glb" ar ar-modes="webxr scene-viewer quick-look"
+                camera-controls tone-mapping="commerce" poster="./img/Onsilla.png" shadow-intensity="1">
+                <button class="Hotspot" slot="hotspot-1"
+                    data-position="0.025228176120544635m 0.03489821446016772m 0.033821176041657436m"
+                    data-normal="0.04897736829586151m 0.9987296263447853m 0.011846976661466087m"
+                    data-visibility-attribute="visible">
+                    <div class="HotspotAnnotation">Maple Wood Material</div>
+                </button><button class="Hotspot" slot="hotspot-3"
+                    data-position="0.24984698584362808m 1.0227542999385173m -0.07065175554614089m"
+                    data-normal="-0.8153236860573079m 0.20888064582282215m 0.5400149653061158m"
+                    data-visibility-attribute="visible">
+                    <div class="HotspotAnnotation">Canvas Fabric</div>
+                </button>
+            </model-viewer>
+            <button id="modelbutton" onclick="showFrontView2('modelViewer2')">Front View</button>
+            <button id="modelbutton" onclick="showBackView2('modelViewer2')">Back View</button>
+            <button id="modelbutton" onclick="showTopView2('modelViewer2')">Top View</button>
+        </div>
+        <div class="chairs-item">
+            <h2>Avona</h2>
+            <p>Dancing on the edge of comfort and elegance</p>
+            <model-viewer id="modelViewer3" src="./Models/Avona.glb" ar ar-modes="webxr scene-viewer quick-look"
+                camera-controls tone-mapping="commerce" poster="./img/Avona.png" shadow-intensity="1">
+                <button class="Hotspot" slot="hotspot-1"
+                    data-position="0.2507078206168645m 0.4517254423635506m 0.5891981087439293m"
+                    data-normal="0.7635585452263568m 0.6430803064437262m -0.05853261890649437m"
+                    data-visibility-attribute="visible">
+                    <div class="HotspotAnnotation">Vinyl Fabric</div>
+                </button><button class="Hotspot" slot="hotspot-2"
+                    data-position="-0.6208905508364562m 0.8677792297394398m 0.7206892233788431m"
+                    data-normal="0.05460223085876042m 0.32011877229730196m 0.9458026052026474m"
+                    data-visibility-attribute="visible">
+                    <div class="HotspotAnnotation">Ergonomic Design</div>
+                </button>
+            </model-viewer>
+            <button id="modelbutton" onclick="showFrontView3('modelViewer3')">Front View</button>
+            <button id="modelbutton" onclick="showBackView3('modelViewer3')">Back View</button>
+            <button id="modelbutton" onclick="showTopView3('modelViewer3')">Top View</button>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>Jhester Bersalona &copy; all rights reserved</p>
+</footer>
+
+<script>
+    const modelViewer1 = document.getElementById('modelViewer1');
+
+    function showFrontView1() {
+        modelViewer1.cameraOrbit = '85deg 70deg 3m';
+    }
+
+    function showBackView1() {
+        modelViewer1.cameraOrbit = '-90deg 70deg 3m';
+    }
+
+    function showTopView1() {
+        modelViewer1.cameraOrbit = '90deg -180deg 3m';
+    }
+
+    const modelViewer2 = document.getElementById('modelViewer2');
+
+    function showFrontView2() {
+        modelViewer2.cameraOrbit = '-60deg 80deg 3m';
+    }
+
+    function showBackView2() {
+        modelViewer2.cameraOrbit = '90deg 80deg 3m';
+    }
+
+    function showTopView2() {
+        modelViewer2.cameraOrbit = '-90deg -180deg 3m';
+    }
+
+    const modelViewer3 = document.getElementById('modelViewer3');
+
+    function showFrontView3() {
+        modelViewer3.cameraOrbit = '85deg 70deg 3m';
+    }
+
+    function showBackView3() {
+        modelViewer3.cameraOrbit = '-90deg 70deg 3m';
+    }
+
+    function showTopView3() {
+        modelViewer3.cameraOrbit = '90deg -180deg 3m';
+    }
+</script>
+
 
 </html>

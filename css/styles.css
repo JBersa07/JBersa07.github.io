@@ -1,0 +1,185 @@
+html {
+    color: rgb(245, 245, 245);
+    scroll-behavior: smooth;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: rgb(81, 81, 81);
+}
+
+.nav {
+    height: 7vh;
+    background-color: rgba(0, 0, 0, .5);
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    z-index: 9999;
+}
+
+.nav ol {
+    margin: 0;
+    justify-content: center;
+}
+
+.nav ol li {
+    display: inline-block;
+    margin: 25px 40px 0px 40px;
+}
+
+.nav ol li a {
+    text-decoration: none;
+    font-size: 1.3em;
+    color: white;
+    transition: 0.5s;
+}
+
+.nav ol li a:hover {
+    color: grey;
+}
+
+#hero-banner {
+    background-image: url(../img/heroimage.png);
+    background-size: cover;
+    background-position: center;
+    background-position-y: -150px;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.banner-wrapper {
+    font-size: 1.5rem;
+    margin-bottom: 1rem, ;
+    background-color: rgba(0,0,0,.3);
+    color: #fff;
+    width: 65%;
+    text-shadow: 2px 4px 4px rgb(78, 78, 78);
+
+}
+
+#chairs {
+    background-color: rgb(81, 81, 81);
+    padding-top: 30px;
+    padding-bottom: 0px;
+}
+
+.chairs-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+.chairs-item {
+    flex-basis: calc(25% - 20px);
+    margin: 50px;
+    box-shadow: 0 0 20px rgb(78, 78, 78);
+}
+
+model-viewer {
+    width: 100%;
+    height: 23rem;
+    background-color: rgb(143, 143, 143);
+}
+
+.Hotspot {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.946);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 1;
+    transition: background-color 0.3s ease;
+}
+
+.HotspotAnnotation {
+    opacity: 0;
+    position: absolute;
+    background-color: rgba(222, 222, 222, 0.8);
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    font-size: 14px;
+    transition: opacity 0.3s ease;
+}
+
+.Hotspot:hover .HotspotAnnotation {
+    opacity: 1; 
+}
+
+.Hotspot:hover {
+    background-color: rgba(112, 112, 112, 0.8);
+}
+
+#modelbutton {
+    background-color: rgb(65, 65, 65);
+    border: none;
+    color: white;
+    padding: 15px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 4px;
+    cursor: pointer;
+}
+
+#modelbutton:hover {
+    background-color: black;
+}
+
+footer {
+    background-color: rgb(81, 81, 81);
+    padding-left: 20px;
+    padding-top: 75px;
+  }
+
+/* Media query for tablets */
+@media screen and (max-width: 1024px) {
+    .chairs-item {
+        flex-basis: calc(50% - 20px);
+    }
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 768px) {
+    .chairs-item {
+        flex-basis: calc(100% - 20px);
+    }
+
+    .nav {
+        z-index: 9999;
+    }
+
+    .nav ol li {
+        margin: 25px 20px 0px 20px;
+    }
+
+    #hero-banner {
+        height: 50vh;
+    }
+
+    .banner-wrapper {
+        font-size: 1.2rem;
+        width: 70%;
+    }
+    
+    #modelbutton {
+        background-color: rgb(65, 65, 65);
+        border: none;
+        color: white;
+        padding: 15px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 10px 4px;
+        cursor: pointer;
+    }
+}
